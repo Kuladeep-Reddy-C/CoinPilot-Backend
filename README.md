@@ -1,4 +1,5 @@
 **Finance Tracker Backend** 
+
 [🔗Backend Link](https://coinpilot-backend.onrender.com)
 
 ```
@@ -56,7 +57,7 @@ The backend is organized for modularity and clarity:
   └── pdfService.js      # Logic for generating PDFs via node-fetch
 
 📄 server.js              # Entry point, route registration, MongoDB connection
-```
+
 
 ---
 
@@ -67,6 +68,10 @@ The backend is organized for modularity and clarity:
 - **Database**: Uses MongoDB for storing financial data  
 
 ---
+
+
+```
+
 
 ## 🌐 Environment Variables
 
@@ -108,7 +113,7 @@ EMAIL_PASS=your_email_password
 
 1. **Clone the repo**
    ```bash
-   git clone [Click Me 😎](https://github.com/Kuladeep-Reddy-C/CoinPilot-Backend.git))
+   git clone https://github.com/Kuladeep-Reddy-C/CoinPilot-Backend.git
    cd finance-tracker-backend
    ```
 
@@ -122,7 +127,7 @@ EMAIL_PASS=your_email_password
 
 4. **Start the server**
    ```bash
-   npm run dev
+   node server.js
    ```
 
 ---
@@ -156,4 +161,6 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 > Crafted with 💻, ☕, and care.
+> Frontend Url👇⤵️
 ```
+https://coinpilot-frontend.onrender.com

@@ -2,7 +2,7 @@
 
 [🔗Backend Link](https://coinpilot-backend.onrender.com)
 
-```
+
 # 💼 Finance Tracker Backend
 
 This is the backend API for the **Finance Tracker** application – a secure and scalable RESTful API built with **Node.js**, **Express**, and **MongoDB**. It handles core functionalities such as:
@@ -43,18 +43,18 @@ The backend is organized for modularity and clarity:
 
 ```
 📁 models/
-  ├── Earning.js         # Schema for earnings
-  └── Expense.js         # Schema for expenses
+  ├── earning.model.js         # Schema for earnings
+  └── expense.model.js         # Schema for expenses
 
 📁 routes/
-  ├── earnings.js        # CRUD for earnings
-  ├── expenses.js        # CRUD for expenses
-  ├── pdf.js             # PDF download route
-  ├── mail.js            # Email sending route
-  └── index.js           # Test route
+  ├── earnings.route.js        # CRUD for earnings
+  ├── expenses.route.js        # CRUD for expenses
+  ├── downlaodTransactions.route.js          # PDF download route
+  ├── get.route.js             # Testing the backend route
+  └── sendMail.route.js        # support Related code
 
 📁 services/
-  └── pdfService.js      # Logic for generating PDFs via node-fetch
+  └── pdfGen.js      # Logic for generating PDFs via node-fetch
 
 📄 server.js              # Entry point, route registration, MongoDB connection
 
@@ -79,7 +79,7 @@ Create a `.env` file in the root directory and define the following:
 
 ```env
 PORT=your_port_here
-MONGOURI=your_mongo_connection_string
+MONGO_URI=your_mongo_connection_string
 BACKEND_URL=your_backend_base_url
 CLERK_SECRET_KEY=your_clerk_secret_key
 CLERK_BACKEND=your_clerk_backend_url
@@ -98,12 +98,12 @@ EMAIL_PASS=your_email_password
 | GET    | `/`                           | Test route                                 |
 | GET    | `/api/earnings`              | Get all earnings                           |
 | POST   | `/api/earnings`              | Create a new earning                       |
-| PUT    | `/api/earnings/:id`          | Update an earning                          |
-| DELETE | `/api/earnings/:id`          | Delete an earning                          |
+| PUT    | `/api/earnings/:_id`          | Update an earning                          |
+| DELETE | `/api/earnings/:_id`          | Delete an earning                          |
 | GET    | `/api/expenses`              | Get all expenses                           |
 | POST   | `/api/expenses`              | Create a new expense                       |
-| PUT    | `/api/expenses/:id`          | Update an expense                          |
-| DELETE | `/api/expenses/:id`          | Delete an expense                          |
+| PUT    | `/api/expenses/:_id`          | Update an expense                          |
+| DELETE | `/api/expenses/:_id`          | Delete an expense                          |
 | POST   | `/support`                   | Send email notification using Nodemailer   |
 | GET    | `/pdf/:name`  | Download earnings and expenses as a PDF    |
 
